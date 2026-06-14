@@ -7,5 +7,3 @@ services:
       DISCORD_CLIENT_ID: ${DISCORD_CLIENT_ID}
       DISCORD_TOKEN: ${DISCORD_TOKEN}
       DATABASE_URL: ${DATABASE_URL}
-    depends_on:
-      - db
