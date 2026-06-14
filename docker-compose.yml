@@ -1,7 +1,7 @@
 services:
 
   roller:
-    build: .
+    image: ghcr.io/eldisgustin/foundry-discord-dice-roller
     restart: unless-stopped
     environment:
       DISCORD_CLIENT_ID: ${DISCORD_CLIENT_ID}

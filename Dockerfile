@@ -13,4 +13,4 @@ RUN npm ci --silent
 
 COPY . .
 
-CMD ["sh", "-c", "npm run db:deploy && npm run start"]
+CMD ["sh", "-c", "npm run db:migrate && npm run start"]
