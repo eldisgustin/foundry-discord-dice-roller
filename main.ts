@@ -1,5 +1,6 @@
-import { startClient, updateAutocomplete } from "./lib/discord/index.ts";
-import { config } from "./lib/config.ts";
+import { config } from "./src/program/config.ts";
+
+import { startClient, updateAutocomplete } from "./src/program/discord.ts";
 
 updateAutocomplete(config.discord.token, config.discord.client_id);
 

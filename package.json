@@ -1,32 +1,24 @@
 {
-  "name": "foundry-discord-dice",
-  "version": "1.0.0",
-  "description": "",
-  "license": "ISC",
-  "author": "",
+  "name": "roller-bot",
+  "private": true,
   "type": "module",
-  "main": "index.js",
   "scripts": {
     "start": "node main.ts",
-    "docker:publish": "docker build -t eldisgustin/foundryvtt-discord-dice-roller . && docker push eldisgustin/foundryvtt-discord-dice-roller",
-    "db:deploy": "npx prisma migrate deploy && npx prisma generate",
-    "test": "vitest"
+    "dev": "node main.ts LOG_LEVEL=debug",
+    "db:deploy": "npx prisma migrate deploy && npx prisma generate"
   },
   "dependencies": {
     "@dice-roller/rpg-dice-roller": "^5.5.1",
-    "@prisma/client": "^6.9.0",
+    "@prisma/client": "^7.8.0",
     "axios": "^1.9.0",
     "consola": "^3.4.2",
     "discord.js": "^14.19.3",
-    "dotenv": "^16.5.0",
-    "inflection": "^3.0.2",
-    "lodash": "^4.17.21",
-    "prisma": "^6.9.0"
+    "dotenv": "^17.4.2",
+    "fuse.js": "^7.4.2",
+    "lodash": "^4.18.1",
+    "prisma": "^7.8.0"
   },
   "devDependencies": {
-    "@types/lodash": "^4.17.17",
-    "rollup-plugin-copy": "^3.5.0",
-    "vite": "^6.3.5",
-    "vitest": "^3.2.3"
+    "@prisma/adapter-better-sqlite3": "^7.8.0"
   }
 }

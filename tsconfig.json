@@ -1,11 +1,10 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
+    "module": "es2015",
+    "moduleResolution": "bundler",
     "noEmit": true,
     "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "allowJs": true
+    "resolveJsonModule": true
   }
 }
