@@ -10,6 +10,6 @@ export default defineConfig({
     extensions: true,
   },
   migrations: {
-    path: "db/migrations",
+    path: "migrations",
   },
 });

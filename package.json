@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node main.ts",
     "dev": "node main.ts LOG_LEVEL=debug",
-    "db:deploy": "npx prisma migrate deploy && npx prisma generate"
+    "db:migrate": "npx prisma migrate deploy"
   },
   "dependencies": {
     "@dice-roller/rpg-dice-roller": "^5.5.1",
