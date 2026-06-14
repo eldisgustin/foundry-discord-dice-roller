@@ -1,7 +1,7 @@
 services:
 
   roller:
-    image: eldisgustin/foundryvtt-discord-dice-roller
+    build: .
     restart: unless-stopped
     environment:
       DISCORD_CLIENT_ID: ${DISCORD_CLIENT_ID}

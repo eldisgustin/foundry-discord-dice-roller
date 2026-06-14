@@ -310,7 +310,7 @@ export type ActorCreateInput = {
   avatar_url: string
   abilities: Prisma.JsonNullValueInput | runtime.InputJsonValue
   proficiencies: Prisma.JsonNullValueInput | runtime.InputJsonValue
-  flags_hasjackofalltrades: boolean
+  flags_hasjackofalltrades?: boolean
 }
 
 export type ActorUncheckedCreateInput = {
@@ -322,7 +322,7 @@ export type ActorUncheckedCreateInput = {
   avatar_url: string
   abilities: Prisma.JsonNullValueInput | runtime.InputJsonValue
   proficiencies: Prisma.JsonNullValueInput | runtime.InputJsonValue
-  flags_hasjackofalltrades: boolean
+  flags_hasjackofalltrades?: boolean
 }
 
 export type ActorUpdateInput = {
@@ -358,7 +358,7 @@ export type ActorCreateManyInput = {
   avatar_url: string
   abilities: Prisma.JsonNullValueInput | runtime.InputJsonValue
   proficiencies: Prisma.JsonNullValueInput | runtime.InputJsonValue
-  flags_hasjackofalltrades: boolean
+  flags_hasjackofalltrades?: boolean
 }
 
 export type ActorUpdateManyMutationInput = {

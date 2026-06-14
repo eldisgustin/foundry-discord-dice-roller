@@ -20,7 +20,7 @@ const config: runtime.GetPrismaClientConfig = {
   "clientVersion": "7.8.0",
   "engineVersion": "3c6e192761c0362d496ed980de936e2f3cebcd3a",
   "activeProvider": "sqlite",
-  "inlineSchema": "generator client {\n  provider               = \"prisma-client\"\n  output                 = \"lib/prisma_generated\"\n  generatedFileExtension = \"ts\"\n  importFileExtension    = \"ts\"\n  moduleFormat           = \"esm\"\n  runtime                = \"nodejs\"\n}\n\ndatasource db {\n  provider = \"sqlite\"\n}\n\nmodel Actor {\n  id                       String  @id\n  owner                    String\n  level                    Int\n  name                     String\n  alias                    String\n  avatar_url               String\n  abilities                Json\n  proficiencies            Json\n  flags_hasjackofalltrades Boolean\n}\n",
+  "inlineSchema": "generator client {\n  provider               = \"prisma-client\"\n  output                 = \"lib/prisma_generated\"\n  generatedFileExtension = \"ts\"\n  importFileExtension    = \"ts\"\n  moduleFormat           = \"esm\"\n  runtime                = \"nodejs\"\n}\n\ndatasource db {\n  provider = \"sqlite\"\n}\n\nmodel Actor {\n  id                       String  @id\n  owner                    String\n  level                    Int\n  name                     String\n  alias                    String\n  avatar_url               String\n  abilities                Json\n  proficiencies            Json\n  flags_hasjackofalltrades Boolean @default(false)\n}\n",
   "runtimeDataModel": {
     "models": {},
     "enums": {},
