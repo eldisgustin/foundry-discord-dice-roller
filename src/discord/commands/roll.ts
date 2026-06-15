@@ -49,7 +49,7 @@ export const roll = {
       );
     }
     const check = interaction.options.getString("check") as CheckValue;
-    const extra = interaction.options.getString("modifier") ?? "";
+    const modifiers = interaction.options.getString("modifiers") ?? "";
     const dice = interaction.options.getString("dice") ?? "1d20";
     const scaling = Scalings[check];
     const abilityValue = (actor.abilities as Record<string, number>)[scaling];
@@ -63,7 +63,7 @@ export const roll = {
       dice,
       formatNumberNotation(abilityModifier),
       formatNumberNotation(pbModifier),
-      extra,
+      modifiers,
     ]
       .filter(Boolean)
       .join(" ");
@@ -77,12 +77,7 @@ export const roll = {
     });
     embed.addFields({
       name: `${getCheckLabel(check)} roll`,
-      value: `\`${result.notation}\``,
-    });
-    embed.addFields({
-      inline: true,
-      name: "Result",
-      value: `\`${result.total}\``,
+      value: `\`${result.output}\``,
     });
 
     await interaction.reply({

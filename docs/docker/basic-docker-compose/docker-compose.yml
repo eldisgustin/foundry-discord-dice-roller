@@ -1,9 +1,16 @@
-services:
+---
 
+services:
   roller:
     image: ghcr.io/eldisgustin/foundry-discord-dice-roller
+    container_name: foundryvtt-discord-dice-roller
     restart: unless-stopped
+    
+    volumes:
+      - /app:/root/of/db/file
+
     environment:
       DISCORD_CLIENT_ID: ${DISCORD_CLIENT_ID}
       DISCORD_TOKEN: ${DISCORD_TOKEN}
-      DATABASE_URL: ${DATABASE_URL}
+      DATABASE_URL: /app/db.sqlite
+      CONSOLA_LEVEL: info # or debug
